@@ -1,66 +1,9 @@
-title Kon-Boot for Windows 7/Xp/2000\nTool to bypass password in Windows or Linux
-find --set-root /Images/konboot.img.gz
-map --mem /Images/konboot.img.gz (fd0)
-map --hook
-chainloader (fd0)+1
-rootnoverify (fd0)
-boot
+title Weird stuff\nJust plain weird stuff, just for fun.
+configfile /Categories/weird.lst
+title Useful\nUseful in some purpose.
+configfile /Categories/useful.lst
+title Games\nIf you want to play some games, here you go.
+configfile /Categories/games.lst
+title Nostalgia\nVisit the old days!
+configfile /Categories/nostalgia.lst
 
-title PLoP Boot Manager\nBoot from any disk using a simple floppy disk.
-find --set-root /Images/plop.img.gz
-map --mem /Images/plop.img.gz (fd0)
-map --hook
-chainloader (fd0)+1
-rootnoverify (fd0)
-boot
-
-title Typing Shell\nFor fun.
-find --set-root /Images/Stuff/typingshell.img.gz
-map --mem /Images/Stuff/typingshell.img.gz (fd0)
-map --hook
-chainloader (fd0)+1
-rootnoverify (fd0)
-boot
-
-title Pillman\nA cool bootsector game.
-find --set-root /Images/Games/pillman.img.gz
-map --mem /Images/Games/pillman.img.gz (fd0)
-map --hook
-chainloader (fd0)+1
-rootnoverify (fd0)
-boot
-
-title Nyan Cat\nBecause why not.
-find --set-root /Images/Stuff/nyancat.img.gz
-map --mem /Images/Stuff/nyancat.img.gz (fd0)
-map --hook
-chainloader (fd0)+1
-rootnoverify (fd0)
-boot
-
-title Nyan Cat with melody\nThe original Nyan Cat MBR from MEMZ
-find --set-root /Images/Stuff/nyancatmelody.img.gz
-map --mem /Images/Stuff/nyancatmelody.img.gz (fd0)
-map --hook
-chainloader (fd0)+1
-rootnoverify (fd0)
-boot
-
-title Dino\nGoogle Chromes dino game but made in Assembly!
-find --set-root /Images/Games/dino.img.gz
-map --mem /Images/Games/Games/dino.img.gz (fd0)
-map --hook
-chainloader (fd0)+1
-rootnoverify (fd0)
-boot
-
-title Boot ISO Image\nBoot a bootable ISO image
-find --set-root /Images/Installers/Tiny7.iso.gz
-map --mem /Images/Installers/Tiny7.iso.gz (0xff)
-map --hook
-root (0xff)
-chainloader (0xff)
-boot
-
-
-title Back
